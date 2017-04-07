@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skb.notification.dao.NotificationMapper">
+
+    <resultMap id="notification" type="com.skb.notification.domain.Notification">
+        <id property="id" column="n_id"/>
+        <result property="message" column="n_message"/>
+        <result property="status" column="n_status"/>
+    </resultMap>
+
+
+
+    <select id="selectNotificationById" resultMap="notification">
+        SELECT
+        *
+        FROM
+        notification
+        WHERE
+        n_id = #{id}
+    </select>
+
+    <select id="selectAllNotifications" resultMap="notification">
+        SELECT
+        *
+        FROM
+        notification
+    </select>
+</mapper>

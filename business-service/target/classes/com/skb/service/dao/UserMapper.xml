@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skb.service.dao.UserMapper">
+
+    <resultMap id="user" type="com.skb.service.domain.User">
+        <id property="id" column="user_id"/>
+        <result property="name" column="user_name"/>
+        <result property="age" column="user_age"/>
+    </resultMap>
+    
+    <insert id="insertUser">
+        INSERT INTO
+          user (user_name, user_age)
+        VALUES
+          (#{name}, #{age})
+    </insert>
+
+    <update id="updateUserOnNameById">
+        UPDATE
+          user
+        SET
+          user_name = #{name},
+          user_age = #{age}
+        WHERE
+          user_id = #{id}
+    </update>
+
+    <delete id="deleteUserById">
+        DELETE FROM
+          user
+        WHERE
+          user_id = #{id}
+    </delete>
+
+    <select id="selectUserById" resultMap="user">
+        SELECT
+          *
+        FROM
+          user
+        WHERE
+          user_id = #{id}
+    </select>
+
+    <select id="selectAllUsers" resultMap="user">
+        SELECT
+          *
+        FROM
+          user
+    </select>
+</mapper>
