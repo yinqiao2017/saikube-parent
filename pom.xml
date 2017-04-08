@@ -10,7 +10,7 @@
 		<module>eureka-service</module>
 		<module>zuul-service</module>
 		<module>business-service</module>
-        <module>notifaction-service</module>
+        <module>notification-service</module>
     </modules>
 
 	<parent>
