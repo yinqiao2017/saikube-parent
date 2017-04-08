@@ -9,6 +9,7 @@
         <module name="business-service" />
         <module name="eureka-service" />
         <module name="notifaction-service" />
+        <module name="order-service" />
         <module name="zuul-service" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="business-service" target="1.8" />
       <module name="eureka-service" target="1.8" />
       <module name="notifaction-service" target="1.8" />
+      <module name="order-service" target="1.8" />
       <module name="saikube-parent" target="1.8" />
       <module name="zuul-service" target="1.8" />
     </bytecodeTargetLevel>

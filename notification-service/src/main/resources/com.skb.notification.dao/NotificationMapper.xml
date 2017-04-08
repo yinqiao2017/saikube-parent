@@ -8,17 +8,6 @@
         <result property="status" column="n_status"/>
     </resultMap>
 
-
-
-    <select id="selectNotificationById" resultMap="notification">
-        SELECT
-        *
-        FROM
-        notification
-        WHERE
-        n_id = #{id}
-    </select>
-
     <select id="selectAllNotifications" resultMap="notification">
         SELECT
         *
